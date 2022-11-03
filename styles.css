@@ -1,0 +1,67 @@
+body{
+    margin: 0;
+    padding: 0;
+    color: white;
+    text-align: center;
+    background-color: black;
+}
+html{
+    overflow-x: hidden;
+}
+p{
+    font-size: 20pt;
+    margin-top: 35vh;
+    transition: all 0.1s;
+}
+p:hover{
+    translate: 25% 30%;
+}
+.container1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    margin:2.5vh;
+}
+.circle1 .home{
+    margin-right: 2vh;
+    display: inline-block;
+    width: 15vh;
+    height: 15vh;
+    background: url(Home.png);
+    background-position: 50% 50%;
+    background-size: cover;
+    border-radius: 50%;
+    transition: all .1s ease-in-out;
+}
+.circle2 .game {
+    margin-right: 2vh;
+    display: inline-block;
+    width: 15vh;
+    height: 15vh;
+    background: url(Game.png);
+    background-position: 50% 50%;
+    background-size: cover;
+    border-radius: 50%;
+    transition: all .1s ease-in-out;
+}
+.circle3 .timer {
+    margin-right: 2vh;
+    display: inline-block;
+    width: 15vh;
+    height: 15vh;
+    background: url(Timer.png);
+    background-position: 50% 50%;
+    background-size: cover;
+    border-radius: 50%;
+    transition: all .1s ease-in-out;
+}
+.circle3 .timer:hover{
+    transform: scale(1.25);
+}
+.circle2 .game:hover{
+    transform: scale(1.25);
+}
+.circle1 .home:hover {
+    transform: scale(1.25);
+}

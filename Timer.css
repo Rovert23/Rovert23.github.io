@@ -1,0 +1,93 @@
+body{
+    margin: 0;
+    padding: 0;
+    color: white;
+    text-align: center;
+    background-color: black;
+}
+html{
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+.stopwatch{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 5vh;
+}
+button{
+    margin: 5vh;
+}
+.sux{
+    margin: -5vh;
+    border-radius: 50%;
+}
+.sux2{
+    margin: -5vh;
+    border-radius: 50%;
+}
+.time{
+    font-size: 10vh;
+    padding: 0;
+    margin: 0;
+}
+#sw-rst{
+    background-color: red;
+    width: 25vh;
+    height: 25vh;
+}
+#sw-go{
+    background-color: green;
+    width: 25vh;
+    height: 25vh;
+}
+.container1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    margin:2.5vh;
+}
+.circle1 .home{
+    margin-right: 2vh;
+    display: inline-block;
+    width: 15vh;
+    height: 15vh;
+    background: url(Home.png);
+    background-position: 50% 50%;
+    background-size: cover;
+    border-radius: 50%;
+    transition: all .1s ease-in-out;
+}
+.circle2 .game {
+    margin-right: 2vh;
+    display: inline-block;
+    width: 15vh;
+    height: 15vh;
+    background: url(Game.png);
+    background-position: 50% 50%;
+    background-size: cover;
+    border-radius: 50%;
+    transition: all .1s ease-in-out;
+}
+.circle3 .timer {
+    margin-right: 2vh;
+    display: inline-block;
+    width: 15vh;
+    height: 15vh;
+    background: url(Timer.png);
+    background-position: 50% 50%;
+    background-size: cover;
+    border-radius: 50%;
+    transition: all .1s ease-in-out;
+}
+.circle3 .timer:hover{
+    transform: scale(1.25);
+}
+.circle2 .game:hover{
+    transform: scale(1.25);
+}
+.circle1 .home:hover {
+    transform: scale(1.25);
+}
