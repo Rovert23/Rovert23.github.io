@@ -1,0 +1,38 @@
+.message {
+    border-radius: 25px;
+    padding: 4px;
+    border: 2px;
+    border-style: solid;
+    border-color: gray;
+    position: absolute;
+    right: 10px;
+    margin: 2px;
+    overflow-wrap: normal;
+}
+
+.response {
+    border-radius: 25px;
+    padding: 2px;
+    border: 2px;
+    border-style: solid;
+    border-color: darkgray;
+    position: absolute;
+    left: 10px;
+}
+
+#chatting {
+    position: fixed;
+    bottom: 0;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#chatting {
+    zoom: 250%;
+}
+
+body {
+    background-color: #000066;
+    color: white;
+}

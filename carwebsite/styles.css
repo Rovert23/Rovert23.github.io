@@ -1,0 +1,385 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: black;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(35, 255, 175);
+    border-radius: 10px;
+}
+
+.headerContainer {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    height: 35px;
+}
+
+.logoFlexbox {
+    background-color: rgba(255, 255, 255, 0.5);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    margin: 3%;
+}
+
+.menuList {
+    left: 10%;
+    display: inline-flex;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    margin: 2vh;
+}
+
+.menuList li {
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    margin: 1vw;
+}
+
+.chatYeah {
+    right: 0;
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.5);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    margin: 3%;
+}
+
+.chatIMG {
+    height: 40px;
+    width: auto;
+}
+
+.menuFlexbox i {
+    text-shadow: 0 0 20px rgb(35, 255, 175);
+}
+
+button {
+    background-color: transparent;
+    border: none;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.wrapper {
+    background-color: #000066;
+    height: 100vh;
+    width: 100vw;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    perspective: 10px;
+}
+
+.fakeHeader {
+    justify-content: center;
+    position: relative;
+    display: flex;
+    height: 100%;
+    width: 100vw;
+    transform-style: preserve-3d;
+    z-index: -1;
+}
+
+.L1 {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+    transform: translateZ(-15px) scale(2.5);
+}
+
+.L2 {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+    transform: translateZ(-30px) scale(4);
+}
+
+.titleContainer {
+    transform: translateZ(-25px) translateY(75vh) scale(3);
+    text-align: center;
+    text-shadow: 0 0 20px rgb(35, 255, 175);
+}
+
+.title {
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: 'Courier New';
+    font-weight: bold;
+    font-size: 72pt;
+}
+
+
+.tagline {
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: 'Courier New';
+    font-weight: bold;
+    font-size: 20pt;
+}
+
+.L3 {
+    color: white;
+    font-family: 'Courier New';
+    font-weight: bold;
+    font-size: 30pt;
+    position: absolute;
+    text-align: center;
+    z-index: -1;
+    transform: translateZ(-9px) translateY(55vh) scale(1);
+    text-shadow: 0 0 20px rgb(35, 255, 175);
+    animation: bounce 4s infinite;
+    filter: drop-shadow(0px 10px 100px rgb(35, 255, 175));
+}
+
+.a {
+    margin: 0;
+    padding: 0;
+}
+
+.b {
+    margin: 0;
+    padding: 0;
+}
+
+.L4 {
+    object-fit: cover;
+    width: 100vw;
+    height: 18vh;
+}
+
+:root {
+    --L7: 0s;
+    --L8: 0s;
+    --L9: 0s;
+    --L10: 0s;
+    --L11: 0s;
+}
+
+.L5 {
+    opacity: 0%;
+    height: 0;
+    width: 0;
+    animation: moveCar 20s linear infinite;
+}
+
+.L7 {
+    opacity: 0%;
+    height: 0;
+    width: 0;
+    animation: moveCar 20s var(--L7) linear infinite;
+}
+
+.L8 {
+    opacity: 0%;
+    height: 0;
+    width: 0;
+    animation: moveCar 20s var(--L8) linear infinite;
+}
+
+.L9 {
+    opacity: 0%;
+    height: 0;
+    width: 0;
+    animation: moveCar 20s var(--L9) linear infinite;
+}
+
+.L10 {
+    opacity: 0%;
+    height: 0;
+    width: 0;
+    animation: moveCar 20s var(--L10) linear infinite;
+}
+
+.L11 {
+    opacity: 0%;
+    height: 0;
+    width: 0;
+    animation: moveCar 20s var(--L11) linear infinite;
+}
+
+@keyframes moveCar {
+    0% {
+        height: 10%;
+        width: auto;
+        opacity: 100%;
+        position: absolute;
+        transform: translateX(200vw) translateY(-25vh)
+    }
+
+    33% {
+        height: 10%;
+        width: auto;
+        opacity: 100%;
+        position: absolute;
+        transform: translateX(-200vw) translateY(-25vh)
+    }
+
+    66% {
+        height: 10%;
+        width: auto;
+        opacity: 100%;
+        position: absolute;
+        transform: translateX(-200vw) scaleX(-1) translateY(-15vh)
+    }
+
+    100% {
+        height: 10%;
+        width: auto;
+        opacity: 100%;
+        position: absolute;
+        transform: translateX(200vw) scaleX(-1) translateY(-15vh)
+    }
+}
+
+.carContiner {
+    display: inline;
+
+}
+
+@keyframes bounce {
+    0% {
+        margin-top: 10vh;
+    }
+
+    50% {
+        margin-top: 25vh;
+    }
+
+    100% {
+        margin-top: 10vh;
+    }
+}
+
+.Background {
+    transform: translateZ(-10px) scale(2);
+    background-color: #000066;
+    width: 100vw;
+    height: 130vh;
+    margin-top: 80vh;
+    text-align: center;
+}
+
+.text {
+    padding: 50px;
+}
+
+.side {
+    display: none;
+    position: fixed;
+    height: 50vh;
+    width: 15%;
+    padding: 20px;
+    overflow: wrap;
+}
+
+.menuList {
+    list-style-type: none;
+}
+
+.sidelink {
+    color: white;
+    text-shadow: 0 0 20px rgb(35, 255, 175);
+    text-align: center;
+    font-family: 'Courier New';
+    font-weight: bold;
+    font-size: 12pt;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+
+a:visited {
+    text-decoration: none;
+}
+
+
+a:hover {
+    text-decoration: none;
+}
+
+
+a:active {
+    text-decoration: none;
+}
+
+.Background .carSearch {
+    border-radius: 50px;
+    padding: 50px;
+    padding-bottom: 200px;
+    margin: 100px;
+    margin-top: 200px;
+}
+
+.carSearch {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+iframe {
+    display: none;
+    z-index: 500;
+    position: sticky;
+    bottom: 0;
+    border: 2px solid black;
+    border-radius: 25px;
+    margin-left: 15px;
+}
+
+.carAutoComplete {
+    margin-right: 5%;
+    list-style: none;
+    background-color: black;
+    /* 20 */
+}
+
+#autoComplete a {
+    color: white;
+}
+
+.textOne {
+    font-size: 20pt;
+    color: rgb(35, 255, 175);
+}
+
+.typer {
+    margin: 0;
+}

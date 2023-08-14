@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Rovert's Website Collection</title>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2345206621850477"
+     crossorigin="anonymous"></script>
+        <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/libertinus-mono" type="text/css"/>
+        <style>
+            #description {
+                color: white;
+                font-family: 'Libertinus Mono', monospace;
+                height: 100vh;
+                width: 40vw;
+                margin: 0;
+                background-color: rgb(0,0,0);
+                font-size: 20pt;
+            }
+            h1 {
+                text-align: center;
+                color: rgb(0, 255, 200);
+                font-family: 'comic Sans';
+                font-weight: bold;
+            }
+            <!-- #Music {
+                text-align: center;
+            } -->
+            p {
+                padding: 10px 50px;
+            }
+            a:link {
+                color: white;
+                text-decoration: none;
+            }
+            a:visited {
+                color: white;
+                text-decoration: none;
+            } 
+            a:hover {
+                color: white;
+                text-decoration: none;
+            }
+            a:active {
+                color: white;
+                text-decoration: none;
+            }
+            #container a div p {
+                font-size: 25pt;
+            }
+            #container a div {
+                display: flex;
+                background-position: center center;
+                background-size: cover;
+                height: 25vw;
+                width: 25vw;
+                border-radius: 20px;
+                margin: 2vh 2vh;
+                justify-content: center;
+                align-items: center;
+                transition: transform 0.3s ease;
+            }
+            #container a div:hover{
+                transform: scale(1.05);
+            }
+            body {
+                overflow: hidden;
+                display: flex;
+                margin: 0;
+                padding: 0;
+                background-color: rgb(196, 21, 21);
+            }
+            #container {
+                overflow: scroll;
+                height: 100vh;
+                width: 60vw;
+                justify-content: center;
+                display: flex;
+                flex-wrap: wrap;
+                background: radial-gradient(circle farthest-corner at 50% 50%, #000066, #160027);
+            }
+        </style>
+    </head>
+    <body>
+        <div id="description">
+            <h1>Rovert's Website Collection</h1>
+            <!-- <div id="Music">
+                <audio controls>
+                    <source src="OutOfTheRain(Instramental).mp3" type="audio/mpeg">
+                </audio>
+            </div> -->
+            <p>
+                This digital platform serves as a timeless repository,
+                showcasing an evolving collection of websites crafted through the ages.
+                Within its virtual confines, it stands as both a vault and a portal to the past,
+                an enduring testament to the journey of creation and innovation.
+                Herein lies the ability to witness and safeguard the continuum of my endeavors.
+            </p>
+        </div>
+        <div id="container">
+        </div>
+        <script>
+            const items = [
+            ['/Rovert23.github.io/RockPaperScissors/notindex.html', '/Rovert23.github.io/RockPaperScissors/Website1.png', 'Games'],
+            ['/Rovert23.github.io/Cubing/index.html', '/Rovert23.github.io/Cubing/Website2.png', 'SpeedCubing'],
+            ['/Rovert23.github.io/carwebsite/index.html', '/Rovert23.github.io/carwebsite/Website3.png', 'CarWebsite.cool'],
+            ['', 'Website4.png', 'NationalParks'],
+            ['', 'Website5.png', 'PersonalWebsite'],
+            ['', 'Website6.png', 'Photography'],
+            ['', 'Website7.png', 'Cars'],
+            ['', 'Website8.png', 'Airplanes']
+        ];
+        
+        for (const item of items) {
+            const [Website, Picture, Title] = item;
+            const divHolder = document.getElementById('container');
+            const link = document.createElement('a');
+            const divAdd = document.createElement('div');
+            const p = document.createElement('p');
+            divAdd.style.backgroundColor = 'black';
+            divAdd.addEventListener('mouseenter', () => {
+                p.style.color = 'transparent';
+                divAdd.style.backgroundImage = `url("${Picture}")`;
+            });
+            divAdd.addEventListener('mouseleave', () => {
+                p.style.color = 'white';
+                divAdd.style.backgroundImage = 'none';
+            });
+            divHolder.appendChild(link);
+            link.href = Website;
+            link.appendChild(divAdd);
+            p.textContent = Title;
+        
+            divAdd.appendChild(p);
+        }        
+        </script>
+    </body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="./about.js"></script>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <title>T&T Auto</title>
+</head>
+
+<body>
+    <div class="headerContainer">
+        <div class="logoFlexbox">
+            <a href="../index.html"><img src="../img/COOL1.png" alt="TTLogo" class="logo"></a>
+        </div>
+        <ul class="menuList">
+            <li>
+                <a href="../All Cars/car.html" class="sidelink cars">
+                    <div class="sideButton">All Cars</div>
+                </a>
+            </li>
+            <li>
+                <a href="../Loan/loan.html" class="sidelink cars">
+                    <div class="sideButton">Loan Calculator</div>
+                </a>
+            </li>
+            <li>
+                <a href="../Reps/reps.html" class="sidelink reps">
+                    <div class="sideButton">Representatives</div>
+                </a>
+            </li>
+            <li>
+                <a href="../About/about.html" class="sidelink about">
+                    <div class="sideButton">About</div>
+                </a>
+            </li>
+        </ul>
+        <div class="chatYeah">
+            <button onclick="toggleChat()"><img src="../img/Chat.png" class="chatIMG"></button>
+        </div>
+    </div>
+    <div class="wrapper">
+        <div class="center">
+            <p>
+                T<a href="../Secret/secret.html" class="wow">&</a>T Auto is a car dealership that is committed to <span
+                    class="title">Cool Quality Cars</span>. This means that all of our cars are <span
+                    class="yes">SERVICED</span> and
+                <span class="yes">DETAILED</span> before they are sold. You will <span
+                    class="yes">NEVER</span> receive a car that will breakdown right after you buy it,
+                and you will <span class="yes">NEVER</span> receive a dirty car.<br><br><span class="BUY">If you are interested in purchasing a car please contact one of the sales representatives.</span><br><span class="important">We are open weekdays from 9AM-5PM.</span>
+            </p>
+        </div>
+    </div>
+
+    <iframe src="../Chat/chat.html" width="525px" height="525px"></iframe>
+</body>
+<style>
+iframe {
+    display: none;
+    z-index: 500;
+    position: sticky;
+    bottom: 0;
+    border: 2px solid black;
+    border-radius: 25px;
+    margin-left: 15px;
+}
+</style>
+<script>
+    const chatBox = document.getElementsByTagName("iframe")[0];
+    chatBox.style.display = "none";
+    function toggleChat() {
+        chatBox.style.display = chatBox.style.display == "none" ? (chatBox.style.display = "block") : (chatBox.style.display = "none");
+    }
+</script>
+
+</html>

@@ -1,0 +1,55 @@
+<!-- Add a chat box to the page -->
+<div id="chat-box">
+    <div id="chat-messages"></div>
+    <input id="chat-input" type="text">
+    <button id="chat-submit">Send</button>
+  </div>
+  
+  <script>
+    // Get references to the chat box elements
+    const messages = document.querySelector('#chat-messages');
+    const input = document.querySelector('#chat-input');
+    const submit = document.querySelector('#chat-submit');
+  
+    // When the user submits a message, send it to the AI
+    submit.addEventListener('click', () => {
+      // Get the user's message
+      const message = input.value;
+  
+      // Clear the input field
+      input.value = '';
+  
+      // Send the message to the AI and get the response
+      const response = sendToAI(message);
+  
+      // Add the message and response to the chat box
+      addMessage(message, 'user');
+      addMessage(response, 'ai');
+    });
+  
+    function sendToAI(message) {
+      // TODO: Send the message to the AI and get the response
+  
+      // For now, just return a dummy response
+      return "I'm sorry, but I'm just a sample AI and don't have access to a real AI. I can only provide pre-existing responses based on my training data.";
+    }
+  
+    function addMessage(message, sender) {
+      // Create a new message element
+      const messageElement = document.createElement('div');
+  
+      // Add the sender's name
+      const senderElement = document.createElement('strong');
+      senderElement.textContent = sender + ': ';
+      messageElement.appendChild(senderElement);
+  
+      // Add the message text
+      const textElement = document.createElement('span');
+      textElement.textContent = message;
+      messageElement.appendChild(textElement);
+  
+      // Add the message to the chat box
+      messages.appendChild(messageElement);
+    }
+  </script>
+  

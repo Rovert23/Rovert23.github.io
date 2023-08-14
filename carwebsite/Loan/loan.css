@@ -1,0 +1,266 @@
+body {
+    transform-origin: top left;
+    transform: translateY(-8px) translateX(-8px);
+    height: 0vh;
+    overflow: hidden;
+}
+
+.wrapper {
+    background-color: #000066;
+    height: 100vh;
+    width: 100vw;
+    display: block;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    text-align: center;
+}
+
+.headerContainer {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    width: 100%;
+    height: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    height: 35px;
+}
+
+.logoFlexbox {
+    float: left;
+    background-color: rgba(255, 255, 255, 0.5);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    margin: 3%;
+}
+
+.menuFlexbox {
+    float: right;
+    background-color: rgba(255, 255, 255, 0.5);
+    display: inline-flex;
+    padding: 20px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    height: 20px;
+    width: 20px;
+    margin: 3%;
+}
+
+.menuFlexbox i {
+    text-shadow: 0 0 20px rgb(35, 255, 175);
+}
+
+button {
+    background-color: transparent;
+    border: none;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.side {
+    display: none;
+    position: fixed;
+    height: 50vh;
+    width: 15%;
+    padding: 20px;
+    overflow: wrap;
+}
+
+.menuList {
+    list-style-type: none;
+}
+
+.menuFlexbox:hover .bars {
+    display: none;
+}
+
+.menuFlexbox:hover .side {
+    display: contents;
+    justify-content: center;
+    align-items: center;
+}
+
+.menuFlexbox:hover {
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    width: 10vh;
+    height: 20vh;
+    transition: 0.1s;
+}
+
+.menuFlexbox:hover li {
+    padding-right: 5.5vh;
+    padding-bottom: 3vh;
+}
+
+.sidelink {
+    color: white;
+    text-shadow: 0 0 20px rgb(35, 255, 175);
+    text-align: center;
+    font-family: 'Courier New';
+    font-weight: bold;
+    font-size: 12pt;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+
+a:visited {
+    text-decoration: none;
+}
+
+
+a:hover {
+    text-decoration: none;
+}
+
+
+a:active {
+    text-decoration: none;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: black;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(35, 255, 175);
+    border-radius: 10px;
+}
+
+.headerContainer {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    height: 35px;
+}
+
+.logoFlexbox {
+    background-color: rgba(255, 255, 255, 0.5);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    margin: 3%;
+}
+
+.menuList {
+    left: 10%;
+    display: inline-flex;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    margin: 2vh;
+}
+
+.menuList li{
+    padding: 5px;
+    background-color: rgba(255,255,255,0.5);
+    border-radius: 5px;
+    margin: 1vw;
+}
+
+.chatYeah {
+    right: 0;
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.5);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    margin: 3%;
+}
+
+.chatIMG {
+    height: 40px;
+    width: auto;
+}
+
+.menuFlexbox i {
+    text-shadow: 0 0 20px rgb(35, 255, 175);
+}
+
+button {
+    background-color: transparent;
+    border: none;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: black;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(35, 255, 175);
+    border-radius: 10px;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+.calc {
+    border-radius: 50px;
+    margin-top: 15vh;
+    margin-bottom: 15vh;
+    background-color: rgba(255, 255, 255, 0.5);
+    height: 70vh;
+    width: 70vw;
+}
+
+input{
+    height: 40px;
+    margin: 3vh;
+}
+
+#PPM {
+    font-size: 30pt;
+    color:rgb(35, 255, 175);
+    margin: 20px;
+}
+
+.pressme {
+    color: white;
+    background-color: black;
+    height: 50px;
+    width: 100px;
+}

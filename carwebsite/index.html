@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <script src="./script.js" defer></script>
+    <title>T&T Auto</title>
+
+</head>
+
+<body>
+    <div class="headerContainer">
+        <div class="logoFlexbox">
+            <a href="./index.html"><img src="./img/COOL1.png" alt="TTLogo" class="logo"></a>
+        </div>
+                <ul class="menuList">
+                    <li>
+                        <a href="./All Cars/car.html" class="sidelink cars">
+                            <div class="sideButton">All Cars</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./Loan/loan.html" class="sidelink cars">
+                            <div class="sideButton">Loan Calculator</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./Reps/reps.html" class="sidelink reps">
+                            <div class="sideButton">Representatives</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./About/about.html" class="sidelink about">
+                            <div class="sideButton">About</div>
+                        </a>
+                    </li>
+                </ul>
+        <div class="chatYeah">
+            <button onclick="toggleChat()"><img src="./img/Chat.png" class="chatIMG"></button>
+        </div>
+    </div>
+    <div class="wrapper">
+        <div class="fakeHeader">
+            <img src="./img/Mountains34 (1).png" class="L1">
+            <img src="./img/Mountains3 (1).png" class="L2">
+            <div class="titleContainer">
+                <p class="title">T&T Auto</p>
+                <p class="tagline">"Cool Quality Cars"</p>
+            </div>
+            <div class="L3">
+                <p class="a">Scroll down to<br>search for cars</p>
+                <a href="#bottom" class="b"><img src="./img/ChevronDown.png"></a>
+            </div>
+        </div>
+        <div class="Background" id="Background">
+            <img src="./img/Asphalt_concrete.jpg" class="L4">
+            <div class="carContainer">
+                <img src="./img/frontCar/redCar.png" class="L5">
+                <img src="./img/frontCar/orangeCar.png" class="L7">
+                <img src="./img/frontCar/yellowCar.png" class="L8">
+                <img src="./img/frontCar/greenCar.png" class="L9">
+                <img src="./img/frontCar/blueCar.png" class="L10">
+                <img src="./img/frontCar/purpleCar.png" class="L11">    
+            </div>
+            <div class="carSearch" id="carSearch">
+                <p class="textOne">Start typing the Make, Model, or Production Year in the box below to search for a car!</p>
+                <input id="carInput">
+                <ul id="autoComplete">
+
+                </ul>
+            </div>
+        </div>
+        <div id="bottom"></div>
+        <iframe src="./Chat/chat.html" width="525px" height="525px" class="typer"></iframe>
+    </div>
+    
+</body>
+
+</html>

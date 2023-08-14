@@ -1,0 +1,136 @@
+body{
+    margin: 0;
+    padding: 0;
+    color: black;
+    text-align: center;
+    background-color: black;
+}
+html{
+    overflow-x: hidden;
+}
+button{
+    border-radius: 50%;
+    margin: 2vh;
+}
+.circleHolder{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.circle11 .Rock{
+    margin: -1vh;
+    display: inline-block;
+    width: 15vh;
+    height: 15vh;
+    background: url(Rock.png);
+    background-position: 50% 50%;
+    background-size: cover;
+    border-radius: 50%;
+}
+.circle12 .Paper{
+    margin: -1vh;
+    display: inline-block;
+    width: 15vh;
+    height: 15vh;
+    background: url(Paper.png);
+    background-position: 50% 50%;
+    background-size: cover;
+    border-radius: 50%;
+}
+.circle13 .Scissors{
+    margin: -1vh;
+    display: inline-block;
+    width: 15vh;
+    height: 15vh;
+    background: url(Scissors.png);
+    background-position: 50% 50%;
+    background-size: cover;
+    border-radius: 50%;
+}
+span{
+    font-weight: bold;
+}
+.bad{
+    font-size: 2vh;
+    margin: auto;
+    padding: 2vh;
+    width: fit-content;
+    background-color: white;
+    border-radius: 20%;
+}
+.wow{
+    background-color: green;
+    height: 10vh;
+    width: 10vh;
+}
+.cool{
+    text-align: center;
+    height: 5vh;
+    width: 20vh;
+}
+#Bot{
+    font-size: 3vh;
+    padding: 2vh;
+}
+#User{
+    font-size: 3vh;
+    padding: 2vh;
+}
+#Score1{
+    font-size: 3vh;
+    padding: 2vh;
+}
+#Score2{
+    font-size: 3vh;
+    padding: 2vh;
+}
+.container1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    margin:2.5vh;
+}
+.circle1 .home{
+    margin-right: 2vh;
+    display: inline-block;
+    width: 15vh;
+    height: 15vh;
+    background: url(Home.png);
+    background-position: 50% 50%;
+    background-size: cover;
+    border-radius: 50%;
+    transition: all .1s ease-in-out;
+}
+.circle2 .game {
+    margin-right: 2vh;
+    display: inline-block;
+    width: 15vh;
+    height: 15vh;
+    background: url(Game.png);
+    background-position: 50% 50%;
+    background-size: cover;
+    border-radius: 50%;
+    transition: all .1s ease-in-out;
+}
+.circle3 .timer {
+    margin-right: 2vh;
+    display: inline-block;
+    width: 15vh;
+    height: 15vh;
+    background: url(Timer.png);
+    background-position: 50% 50%;
+    background-size: cover;
+    border-radius: 50%;
+    transition: all .1s ease-in-out;
+}
+.circle3 .timer:hover{
+    transform: scale(1.25);
+}
+.circle2 .game:hover{
+    transform: scale(1.25);
+}
+.circle1 .home:hover {
+    transform: scale(1.25);
+}
