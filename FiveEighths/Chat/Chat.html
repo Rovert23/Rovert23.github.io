@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FiveEighths</title>
+        <style>
+            html {
+                background-color: black;
+            }
+            body {
+                margin: 0;
+            }
+            .chatContainer {
+                background-color: rgb(32, 32, 32);
+                height: calc(100vh - 4em);
+                width: 100vw;
+            }
+            #chatMessages {
+                height: calc(100vh - 4em - 40px);
+                width: calc(100vw - 40px);
+                padding: 20px;
+                color: white;
+                font-size: 24pt;
+            }
+            #messageInput {
+                height: 4em;
+                width: 85vw;
+            }
+            #sendButton {
+                height: 4em;
+                width: 14vw;
+            }
+            .Navigation {
+                position: sticky;
+                top: 0px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: rgb(0, 0, 0);
+                height: 4em;
+                width: 100vw;
+                z-index: 1;
+            }
+            .Navigation > a > div {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 10em;
+                text-align: center;
+            }
+            .Navigation > a > div:hover {
+                background-color: rgb(50,50,50);
+                height: 4em;
+            }
+            .Navigation > a > div > p {
+                font-size: 20pt;
+            }
+            .Navigation > div {
+                display: flex;
+                height: 3em;
+                width: 0.25em;
+                background-color: white;
+                border-radius: 25%;
+            }
+            h1 {
+                color: white;
+            }
+            a:link {
+                color: white;
+                text-decoration: none;
+            }
+            a:visited {
+                color: white;
+                text-decoration: none;
+            }
+            a:hover {
+                color: white;
+                text-decoration: none;
+            }
+            a:active {
+                color: white;
+                text-decoration: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="Navigation">
+            <a href="/FiveEighths/index.html"><div><p>Home</p></div></a>
+            <div></div>
+            <a href="/FiveEighths/Chat/Chat.html"><div><p>Chat</p></div></a>
+            <div></div>
+            <a href="/FiveEighths/Polls/Polls.html"><div><p>Polls</p></div></a>
+            <div></div>
+            <a href="/FiveEighths/Other/Other.html"><div><p>Other</p></div></a>
+        </div>
+        <div class="chatContainer">
+            <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+            <script>
+                const firebaseConfig = {
+                    apiKey: "AIzaSyAUR2YSumGMYe55Hv0GeyDRfSn6vuHJsUA",
+                    authDomain: "fiveeighths-a3bc4.firebaseapp.com",
+                    projectId: "fiveeighths-a3bc4",
+                    storageBucket: "fiveeighths-a3bc4.appspot.com",
+                    messagingSenderId: "124008025287",
+                    appId: "1:124008025287:web:ab607f06dcb59d048142e2",
+                    measurementId: "G-VN8HYHGGTC"
+                };
+                const app = firebase.initializeApp(firebaseConfig);
+                const analytics = firebase.analytics();
+            </script>
+
+            <!-- Chat interface -->
+            <div id="chat">
+                <div id="chatMessages"></div>
+                <input type="text" id="messageInput" placeholder="Type your message...">
+                <button id="sendButton">Send</button>
+            </div>
+
+            <script>
+                const db = firebase.database();
+                const chatRef = db.ref("chat");
+                const messageInput = document.getElementById("messageInput");
+                const sendButton = document.getElementById("sendButton");
+                const chatMessages = document.getElementById("chatMessages");
+                function displayMessage(message) {
+                    const messageDiv = document.createElement("div");
+                    messageDiv.textContent = message.text;
+                    chatMessages.appendChild(messageDiv);
+                }
+                chatRef.on("child_added", (snapshot) => {
+                    const message = snapshot.val();
+                    displayMessage(message);
+                });
+                sendButton.addEventListener("click", sendMessage);
+                messageInput.addEventListener("keypress", function (e) {
+                    if (e.key === "Enter") {
+                        sendMessage();
+                    }
+                });
+                function sendMessage() {
+                    const messageText = messageInput.value.trim();
+                    if (messageText !== "") {
+                        const message = {
+                            text: messageText
+                        };
+                        chatRef.push(message);
+                        messageInput.value = "";
+                    }
+                }
+            </script>
+        </div>
+    </body>
+</html>

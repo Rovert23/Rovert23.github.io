@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FiveEighths</title>
+        <style>
+            body {
+                margin: 0;
+            }
+            .Background1 {
+                background-image: url(/FiveEighths/Photos/Snapchat-1027009465.jpg);
+                background-size: cover;
+                height: calc(100vh - 4em);
+                width: 100vw;
+            }
+            .logoContainer {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                top: calc(50% - 30vh + 2em);
+                right: calc(50% - 30vw);
+                height: 60vh;
+                width: 60vw;
+                background-color: rgba(0,0,0,.6);
+            }
+            span {
+                color: white;
+                font-size: 150pt;
+            }
+            .Navigation {
+                position: sticky;
+                top: 0px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: rgb(0, 0, 0);
+                height: 4em;
+                width: 100vw;
+                z-index: 1;
+            }
+            .Navigation > a > div {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 10em;
+                text-align: center;
+            }
+            .Navigation > a > div:hover {
+                background-color: rgb(50,50,50);
+                height: 4em;
+            }
+            .Navigation > a > div > p {
+                font-size: 20pt;
+            }
+            .Navigation > div {
+                display: flex;
+                height: 3em;
+                width: 0.25em;
+                background-color: white;
+                border-radius: 25%;
+            }
+            h1 {
+                color: white;
+            }
+            a:link {
+                color: white;
+                text-decoration: none;
+            }
+            a:visited {
+                color: white;
+                text-decoration: none;
+            }
+            a:hover {
+                color: white;
+                text-decoration: none;
+            }
+            a:active {
+                color: white;
+                text-decoration: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="Navigation">
+            <a href="/FiveEighths/index.html"><div><p>Home</p></div></a>
+            <div></div>
+            <a href="/FiveEighths/Chat/Chat.html"><div><p>Chat</p></div></a>
+            <div></div>
+            <a href="/FiveEighths/Polls/Polls.html"><div><p>Polls</p></div></a>
+            <div></div>
+            <a href="/FiveEighths/Other/Other.html"><div><p>Other</p></div></a>
+        </div>
+        <div class="Background1">
+            <div class="logoContainer"><span>Five Eighths</span></div>
+        </div>
+    </body>
+</html>
