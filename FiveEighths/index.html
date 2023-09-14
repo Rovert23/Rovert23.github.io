@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FiveEighths</title>
+        <style>
+            @media (max-width: 1200px) {
+                .logoContainer > h1 {
+                    font-size: 60pt;
+                }
+            }
+            @media (min-width: 1200px) {
+                .logoContainer > h1 {
+                    font-size: 150pt;
+                }
+            }
+            @media (max-width: 650px) {
+                .Navigation > a > div {
+                    width: 6em;
+                }
+            }
+            @media (min-width: 650px) {
+                .Navigation > a > div {
+                    width: 10em;
+                }
+            }
+            body {
+                margin: 0;
+            }
+            .Background1 {
+                background-image: url(/FiveEighths/Photos/Snapchat-1050349402-3.jpg); /* https://picsum.photos/1920/1080/?blur */
+                background-size: cover;
+                background-position: center;
+                height: calc(100vh - 4em);
+                width: 100vw;
+            }
+            .logoContainer {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                height: calc(100vh - 4em);
+                width: 100vw;
+                backdrop-filter: blur(2.5px);
+            }
+            .logoContainer > h1 {
+                text-shadow: 0 5px 5px black;
+                color: white;
+            }
+            .Navigation {
+                position: sticky;
+                top: 0px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: rgb(0, 0, 0);
+                height: 4em;
+                width: 100vw;
+                z-index: 1;
+            }
+            .Navigation > a > div {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
+            .Navigation > a > div:hover {
+                background-color: rgb(50,50,50);
+                height: 4em;
+            }
+            .Navigation > a > div > p {
+                font-size: 20pt;
+            }
+            .Navigation > div {
+                display: flex;
+                height: 3em;
+                width: 0.25em;
+                background-color: white;
+                border-radius: 25%;
+            }
+            h1 {
+                color: white;
+            }
+            a:link {
+                color: white;
+                text-decoration: none;
+            }
+            a:visited {
+                color: white;
+                text-decoration: none;
+            }
+            a:hover {
+                color: white;
+                text-decoration: none;
+            }
+            a:active {
+                color: white;
+                text-decoration: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="Navigation">
+            <a href="/FiveEighths/index.html"><div><p>Home</p></div></a>
+            <div></div>
+            <a href="/FiveEighths/Chat/Chat.html"><div><p>Chat</p></div></a>
+            <div></div>
+            <a href="/FiveEighths/Polls/Polls.html"><div><p>Polls</p></div></a>
+            <div></div>
+            <a href="/FiveEighths/Other/Other.html"><div><p>Other</p></div></a>
+        </div>
+        <div class="Background1">
+            <div class="logoContainer"><h1>Five/Eighths</h1></div>
+        </div>
+    </body>
+</html>

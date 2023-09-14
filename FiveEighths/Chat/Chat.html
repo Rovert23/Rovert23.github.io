@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FiveEighths</title>
+    <link rel="stylesheet" type="text/css" href="styles.css"/>
+</head>
+<body>
+<div class="Navigation">
+    <a href="/FiveEighths/index.html"><div><p>Home</p></div></a>
+    <div></div>
+    <a href="/FiveEighths/Chat/Chat.html"><div><p>Chat</p></div></a>
+    <div></div>
+    <a href="/FiveEighths/Polls/Polls.html"><div><p>Polls</p></div></a>
+    <div></div>
+    <a href="/FiveEighths/Other/Other.html"><div><p>Other</p></div></a>
+</div>
+<div class="chatContainer">
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyAUR2YSumGMYe55Hv0GeyDRfSn6vuHJsUA",
+            authDomain: "fiveeighths-a3bc4.firebaseapp.com",
+            projectId: "fiveeighths-a3bc4",
+            storageBucket: "fiveeighths-a3bc4.appspot.com",
+            messagingSenderId: "124008025287",
+            appId: "1:124008025287:web:ab607f06dcb59d048142e2",
+            measurementId: "G-VN8HYHGGTC"
+        };
+        const app = firebase.initializeApp(firebaseConfig);
+        const analytics = firebase.analytics();
+    </script>
+
+    <!-- Chat interface -->
+    <div id="chat">
+        <div id="chatMessages"></div>
+        <div id="Inputs">
+            <div class="signUp">
+                <button class="Button1" onclick="signIn()">Sign In</button>
+                <button class="Button2" onclick="signOut()">Sign Out</button>
+            </div>
+            <input type="text" id="messageInput" placeholder="Type your message...">
+            <button id="sendButton">Send</button>
+        </div>
+    </div>
+
+    <script>
+        const auth = firebase.auth();
+        const db = firebase.database();
+        const chatRef = db.ref("chat");
+        const messageInput = document.getElementById("messageInput");
+        const sendButton = document.getElementById("sendButton");
+        const chatMessages = document.getElementById("chatMessages");
+
+
+        function displayMessage(message) {
+            const messageDiv = document.createElement("div");
+            const messageTextSpan = document.createElement("span");
+            messageTextSpan.textContent = message.userName + ": " + message.text;
+            messageDiv.appendChild(messageTextSpan);
+
+            chatMessages.appendChild(messageDiv);
+            chatMessages.scrollTop = chatMessages.scrollHeight; // Automatically scroll to the bottom to show the latest message
+        }
+
+        chatRef.on("child_added", (snapshot) => {
+            const message = snapshot.val();
+            displayMessage(message);
+        });
+
+        sendButton.addEventListener("click", sendMessage);
+        messageInput.addEventListener("keypress", function (e) {
+            if (e.key === "Enter") {
+                sendMessage();
+            }
+        });
+
+        function sendMessage() {
+            const messageText = messageInput.value.trim();
+            if (messageText !== "") {
+                const user = auth.currentUser; // Get the currently signed-in user
+                if (user) {
+                    const message = {
+                        text: messageText,
+                        userId: user.uid,
+                        userName: name, // Use the user's display name
+                    };
+                    chatRef.push(message);
+                    messageInput.value = "";
+                } else {
+                    console.error("User not signed in.");
+                }
+            }
+        }
+
+        function signIn() {
+            name = prompt("Enter your name: ");
+            const email = prompt("Enter your email:");
+            const password = prompt("Enter your password:");
+
+            auth.signInWithEmailAndPassword(email, password)
+                .then((userCredential) => {
+                    // User signed in successfully
+                    const user = userCredential.user;
+                    console.log(`Signed in as ${user.email}`);
+                    
+                    // Update the user's display name
+                    user.updateProfile({
+                        displayName: name
+                    }).then(() => {
+                        console.log(`Display name set to ${name}`);
+                        userDisplayName = name; // Store the display name
+                    }).catch((error) => {
+                        console.error("Error setting display name:", error);
+                    });
+
+                    // Reload the page
+                    location.reload();
+                })
+                .catch((error) => {
+                    // Handle errors here
+                    console.error(error.message);
+                });
+        }
+
+        function signOut() {
+            auth.signOut()
+                .then(() => {
+                    // User signed out successfully
+                    console.log("Signed out");
+                })
+                .catch((error) => {
+                    // Handle errors here
+                    console.error(error.message);
+                });
+        }
+    </script>
+</div>
+</body>
+</html>

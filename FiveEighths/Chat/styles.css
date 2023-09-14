@@ -1,0 +1,146 @@
+@media (max-width: 650px) {
+    .Navigation > a > div {
+        width: 6em;
+    }
+}
+@media (min-width: 650px) {
+    .Navigation > a > div {
+        width: 10em;
+    }
+}
+html {
+    background-color: black;
+}
+body {
+    margin: 0;
+}
+.chatContainer {
+    background-color: rgb(58, 58, 58);
+    height: calc(100vh - 4em);
+    width: 100vw;
+}
+#chatMessages {
+    height: calc(100vh - 4em - 40px);
+    width: calc(100vw - 40px);
+    padding: 20px;
+    color: white;
+    font-size: 24pt;
+    overflow: scroll;
+}
+#chatMessages > div{
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid white;
+    background-color: rgba(0, 0, 0, 0.2);
+    width: fit-content;
+}
+#Inputs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 4em;
+    width: 100vw;
+    background-color: rgb(0, 0, 0)
+}
+#messageInput {
+    padding-left: 2em;
+    padding-right: 2em;
+    height: 4.5em;
+    width: 50em;
+    border-radius: none;
+    border-width: 1px;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+}
+#sendButton {
+    padding-left: 2em;
+    padding-right: 2em;
+    height: 4.8em;
+    width: 20em;
+    border-radius: none;
+    border-width: 1px;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+}
+.Button1 {
+    padding: 0;
+    height: 2.4em;
+    width: 6em;
+    border-radius: none;
+    border-width: 1px;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+}
+.Button2 {
+    padding: 0;
+    height: 2.4em;
+    width: 6em;
+    border-radius: none;
+    border-width: 1px;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+}
+.signUp {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    height: 4em;
+    width: 5em;
+}
+.Navigation {
+    position: sticky;
+    top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    height: 4em;
+    width: 100vw;
+    z-index: 1;
+}
+.Navigation > a > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.Navigation > a > div:hover {
+    background-color: rgb(50,50,50);
+    height: 4em;
+}
+.Navigation > a > div > p {
+    font-size: 20pt;
+}
+.Navigation > div {
+    display: flex;
+    height: 3em;
+    width: 0.25em;
+    background-color: white;
+    border-radius: 25%;
+}
+h1 {
+    color: white;
+}
+a:link {
+    color: white;
+    text-decoration: none;
+}
+a:visited {
+    color: white;
+    text-decoration: none;
+}
+a:hover {
+    color: white;
+    text-decoration: none;
+}
+a:active {
+    color: white;
+    text-decoration: none;
+}
